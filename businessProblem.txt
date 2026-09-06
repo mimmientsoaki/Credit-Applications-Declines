@@ -1,0 +1,18 @@
+Hi Data Team,
+
+We have noticed that the number of credit applications being declined has increased over the past few months.
+
+Management would like to understand what is driving the increase and whether there are specific customer segments or application characteristics associated with higher decline rates.
+
+Please investigate the available credit application data and provide:
+
+* An analysis of the current decline rate
+* The main factors associated with declined applications
+* Any customer or application segments showing unusually high decline rates
+* Trends over time
+* Recommendations on what the Credit team should investigate further
+
+The findings will be presented to the Credit Risk Manager and senior management.
+
+Regards,
+Credit Risk Manager

@@ -1,0 +1,35 @@
+# ==========================================
+# 🏢 PROBLEM DEFINITION
+# ==========================================
+
+🏢 1. Business Problem
+The number od credit applications declines increased over the past few months.
+
+🎯 2. Business Objective
+To understand what is driving the increase in credit application declines and whether there are segements and/or application characteristics that are associated with these declines.
+
+❓ 3. Questions to Answer
+Is the declined rate actually increasing, or it could be that the application rate increased?
+3.1. Has the credit application decline rate changed over time?
+3.2. Which customer segments have the highest decline rates?
+3.3. Which application characteristics are associated with higher decline rates?
+3.4. Are there significant trends or changes in decline rates over time?
+3.5. Which factors appear to be most strongly associated with application outcomes?
+
+🎯 4. Possible Target Variable
+Application Status: Approved, Declined, Pending, Cancelled
+
+💼 5. Possible Business Impact
+An increase in credit declines may reduce the number of successful credit applications and potential revenue, while also potentially reducing credit risk. Understanding the reasons behind the increase will help the bank balance growth and risk.
+
+
+# ==========================================
+# 📂 DATA UNDERSTANDING & INITIAL ANALYSIS
+# ==========================================
+
+1. 📐 What is the dataset size?
+2. 📝 What columns do we have?
+3. 🔢 Which columns are numerical?
+4. 🔤 Which columns are categorical?
+5. 🎯 Which column contains the application outcome?
+6. 🔍 What immediately needs investigation?
