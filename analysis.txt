@@ -28,8 +28,92 @@ An increase in credit declines may reduce the number of successful credit applic
 # ==========================================
 
 1. 📐 What is the dataset size?
+Dataset Shape (10000, 16)
+
 2. 📝 What columns do we have?
+Column Names ['Application_ID', 'Application_Date', 'Age', 'Monthly_Income', 'Employment_Type', 'Employment_Years', 'Credit_Score', 'Existing_Debt', 'Requested_Amount', 'Loan_Term_Months', 'Previous_Defaults', 'Previous_Applications', 'Residential_Status', 'Region', 'Debt_to_Income', 'Application_Status']
+
 3. 🔢 Which columns are numerical?
+['Age', 'Monthly_Income', 'Employment_Years', 'Credit_Score', 'Existing_Debt', 'Requested_Amount', 'Loan_Term_Months', 'Previous_Defaults', 'Previous_Applications', 'Debt_to_Income']
+
 4. 🔤 Which columns are categorical?
+['Employment_Type',
+ 'Residential_Status',
+ 'Region',
+ 'Application_Status']
+
 5. 🎯 Which column contains the application outcome?
-6. 🔍 What immediately needs investigation?
+Application_Status
+
+🔍 6. What immediately needs investigation?
+6.1. Do we have null/missing values? 
+We have misssing values in : 
+    Employment_Years         100
+    Residential_Status        80
+    Existing_Debt             60
+6.2. Is the dependent/target variable populated corretly? YES
+6.3.Do we have duplicate records? NO
+6.4. Are there invalid or unusual values? NO
+6.5. Are all application statuses represented corretly? YES
+
+# ==========================================
+# 🔍 FEATURE RELATIONSHIP ANALYSIS
+# ==========================================
+
+| Feature                   | Approved | Declined | Difference / Observation | Initial Interpretation                          |
+| ------------------------- | -------: | -------: | ------------------------ | ----------------------------------------------- |
+| Credit Score          |   662.43 |   614.22 | ~48 points higher        | 🟢 Potentially important                        |
+| Previous Defaults    |    0.182 |    0.307 | Higher for declined      | 🟢 Potentially important                        |
+| Debt-to-Income        |    0.274 |    0.403 | Higher for declined      | 🟢 Potentially important                        |
+| Monthly Income        |  R22,128 |  R19,603 | ~R2,525 higher           | 🟡 Possible relationship, but relatively modest |
+| Existing Debt         |  R55,702 |  R70,242 | ~R14,540 higher          | 🟢 Potentially important                        |
+| Requested Amount      |  R80,692 |  R91,328 | ~R10,636 higher          | 🟡 Possible relationship                        |
+| Employment Years      |    18.57 |    16.31 | ~2.26 years higher       | 🟡 Possible relationship                        |
+| Previous Applications |     1.50 |     1.50 | Almost identical         | 🔴 Very weak relationship                       |
+| Loan Term             |    42.35 |    42.98 | Almost identical         | 🔴 Very weak relationship                       |
+| Age                   |    43.10 |    42.98 | Almost identical         | 🔴 Very weak relationship                       |
+
+
+# 📊 Credit Score vs Application Status
+# Approved applicants had higher average credit scores than declined applicants.
+# This suggests that higher credit scores are associated with a greater likelihood of approval.
+
+
+# ⚠️ Previous Defaults vs Application Status
+# Declined applicants had more previous defaults on average than approved applicants.
+# This suggests that previous defaults are associated with a lower likelihood of approval.
+
+
+# 💳 Debt-to-Income vs Application Status
+# Declined applicants had higher average debt-to-income ratios than approved applicants.
+# This suggests that higher debt-to-income ratios are associated with a lower likelihood of approval.
+
+# 💰 Monthly Income vs Application Status
+# Approved applicants had higher average monthly incomes than declined applicants.
+# However, the difference was relatively small, suggesting a weaker relationship.
+
+# 💸 Existing Debt vs Application Status
+# Declined applicants had higher average existing debt than approved applicants.
+# This suggests that higher existing debt is associated with a lower likelihood of approval.
+
+# 🏦 Requested Amount vs Application Status
+# Declined applicants requested higher loan amounts on average than approved applicants.
+# This suggests that larger requested amounts may be associated with a lower likelihood of approval.
+
+# 💼 Employment Years vs Application Status
+# Approved applicants had more employment years on average than declined applicants.
+# This suggests that employment stability may have some association with application outcomes.
+
+# 📋 Previous Applications vs Application Status
+# The average number of previous applications was very similar across application statuses.
+# This suggests a weak relationship with application outcomes.
+
+# 📅 Loan Term vs Application Status
+# Average loan terms were very similar between approved and declined applicants.
+# This suggests a weak relationship with application outcomes.
+
+# 👤 Age vs Application Status
+# Average age was very similar between approved and declined applicants.
+# This suggests a weak relationship with application outcomes.
+
+So far: Our exploratory analysis identified several variables that show an association with application outcomes, particularly credit score, previous defaults, debt-to-income ratio, and existing debt.
