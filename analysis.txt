@@ -112,8 +112,49 @@ We have misssing values in :
 # Average loan terms were very similar between approved and declined applicants.
 # This suggests a weak relationship with application outcomes.
 
-# 👤 Age vs Application Status
+#👤 Age vs Application Status
 # Average age was very similar between approved and declined applicants.
 # This suggests a weak relationship with application outcomes.
 
 So far: Our exploratory analysis identified several variables that show an association with application outcomes, particularly credit score, previous defaults, debt-to-income ratio, and existing debt.
+
+ 📊 Categorical Feature Statistical Analysis
+# Residential Status, Employment Type, and Region all had p-values greater than 0.05.
+# Therefore, there is not enough statistical evidence to conclude that these variables
+# are associated with Application Status at the 5% significance level.
+
+| Feature                  |   p-value | Result            |
+| ------------------------ | --------: | ----------------- |
+| 💳 Credit Score          | 6.97e-217 | ✅ Significant     |
+| ⚠️ Previous Defaults     |  1.80e-33 | ✅ Significant     |
+| 💰 Debt-to-Income        |  8.28e-47 | ✅ Significant     |
+| 💵 Monthly Income        |  7.22e-23 | ✅ Significant     |
+| 💸 Existing Debt         |  5.18e-32 | ✅ Significant     |
+| 🏦 Requested Amount      |  8.71e-16 | ✅ Significant     |
+| 💼 Employment Years      |  8.88e-25 | ✅ Significant     |
+| 📋 Previous Applications |     0.938 | ❌ Not significant |
+| 📅 Loan Term             |     0.610 | ❌ Not significant |
+| 👤 Age                   |     0.647 | ❌ Not significant |
+
+# 📊 Numerical Features Statistical Analysis
+# Seven numerical features showed statistically significant differences between approved and declined applications, while previous applications, loan term, and age showed no significant differences.
+
+🤖 Logistic Regression Results
+| Metric | Approved | Declined |
+| ------ | -------- | -------- |
+| Precision | 69% | 69% |
+| Recall | 76% | 62% |
+| F1-score | 72% | 65% |
+
+| Overall Metric | Result |
+| -------------- | ------ |
+| 🎯 Accuracy | 69% |
+
+🔍 Confusion Matrix
+
+| Actual / Predicted | Approved | Declined |
+| ------------------ | -------- | -------- |
+| Approved | 739 ✅ | 236 ⚠️ |
+| Declined | 325 ⚠️ | 527 ✅ |
+
+📊 Analysis: The Logistic Regression model achieved 69% accuracy, performing better at identifying approved applications (76% recall) than declined applications (62% recall).
