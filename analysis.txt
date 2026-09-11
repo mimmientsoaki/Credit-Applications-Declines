@@ -158,3 +158,73 @@ So far: Our exploratory analysis identified several variables that show an assoc
 | Declined | 325 ⚠️ | 527 ✅ |
 
 📊 Analysis: The Logistic Regression model achieved 69% accuracy, performing better at identifying approved applications (76% recall) than declined applications (62% recall).
+
+🌳 Decision Tree Results
+| Metric    | Approved | Declined |
+| --------- | -------: | -------: |
+| Precision |      61% |      55% |
+| Recall    |      60% |      56% |
+| F1-score  |      60% |      55% |
+| Overall Metric |     Result |
+| -------------- | ---------: |
+| 🎯 Accuracy    | **57.85%** |
+| Actual / Predicted | Approved | Declined |
+| ------------------ | -------: | -------: |
+| **Approved**       |    583 ✅ |   392 ⚠️ |
+| **Declined**       |   378 ⚠️ |    474 ✅ |
+
+# 🌳 Decision Tree Model
+# The Decision Tree achieved 58% accuracy and performed worse than Logistic Regression.
+# It also had lower recall for declined applications at 56%.
+
+🌲 Random Forest Results
+| Metric    | Approved | Declined |
+| --------- | -------: | -------: |
+| Precision |      67% |      67% |
+| Recall    |      74% |      59% |
+| F1-score  |      71% |      62% |
+| Overall Metric |     Result |
+| -------------- | ---------: |
+| 🎯 Accuracy    | **67.10%** |
+| Actual / Predicted | Approved | Declined |
+| ------------------ | -------: | -------: |
+| **Approved**       |    726 ✅ |   249 ⚠️ |
+| **Declined**       |   352 ⚠️ |    500 ✅ |
+
+# 🌲 Random Forest Model
+# The Random Forest achieved 67% accuracy and performed better than the Decision Tree.
+# However, Logistic Regression still performed better overall, especially for identifying declined applications.
+
+🚀 Gradient Boosting Results
+| Metric    | Approved | Declined |
+| --------- | -------: | -------: |
+| Precision |      69% |      68% |
+| Recall    |      75% |      62% |
+| F1-score  |      72% |      65% |
+| Overall Metric |     Result |
+| -------------- | ---------: |
+| 🎯 Accuracy    | **68.75%** |
+| Actual / Predicted | Approved | Declined |
+| ------------------ | -------: | -------: |
+| **Approved**       |    732 ✅ |   243 ⚠️ |
+| **Declined**       |   328 ⚠️ |    524 ✅ |
+
+# 🚀 Gradient Boosting Model
+# The Gradient Boosting model achieved 69% accuracy and a 62% recall for declined applications.
+# Its performance was very similar to Logistic Regression.
+
+🏆 All models results
+| Model                  |   Accuracy | Declined Recall | Declined F1 |
+| ---------------------- | ---------: | --------------: | ----------: |
+| 🤖 Logistic Regression | **69.00%** |         **62%** |     **65%** |
+| 🚀 Gradient Boosting   |     68.75% |         **62%** |     **65%** |
+| 🌲 Random Forest       |     67.10% |             59% |         62% |
+| 🌳 Decision Tree       |     57.85% |             56% |         55% |
+
+
+
+
+
+
+
+

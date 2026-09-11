@@ -10,6 +10,9 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.preprocessing import StandardScaler
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 
 df = pd.read_csv("credit_applications.csv")
 
@@ -180,7 +183,7 @@ print("Predictions:", y_pred[:10])
 # ==========================================
 # 📏 MODEL EVALUATION
 # ==========================================
-
+print("\n📊 Logistic Regression")
 # Accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print("\n🎯 Accuracy:", round(accuracy, 4))
@@ -194,3 +197,70 @@ print(classification_report(
 # Confusion Matrix
 print("\n🔍 Confusion Matrix")
 print(confusion_matrix(y_test, y_pred))
+
+# ==========================================
+# 🌳 2. DECISION TREE
+# ==========================================
+tree_model = DecisionTreeClassifier(random_state=42)
+tree_model.fit(X_train, y_train)
+tree_pred = tree_model.predict(X_test)
+
+# ==========================================
+# 📏 DECISION TREE EVALUATION
+# ==========================================
+print("\nDecision Tree")
+print("\n🎯 Accuracy:", round(accuracy_score(y_test, tree_pred), 4))
+print("\n📊 Classification Report")
+print(classification_report(
+    y_test,
+    tree_pred,
+    target_names=label_encoder.classes_
+))
+print("\n🔍 Confusion Matrix")
+print(confusion_matrix(y_test, tree_pred))
+
+# ==========================================
+# 🌲 3. RANDOM FOREST
+# ==========================================
+rf_model = RandomForestClassifier(
+    n_estimators=100,
+    random_state=42
+)
+rf_model.fit(X_train, y_train)
+rf_pred = rf_model.predict(X_test)
+
+# ==========================================
+# 📏 RANDOM FOREST EVALUATION
+# ==========================================
+
+print("\nRandom Forest")
+print("\n🎯 Accuracy:", round(accuracy_score(y_test, rf_pred), 4))
+print("\n📊 Classification Report")
+print(classification_report(
+    y_test,
+    rf_pred,
+    target_names=label_encoder.classes_
+))
+print("\n🔍 Confusion Matrix")
+print(confusion_matrix(y_test, rf_pred))
+
+# ==========================================
+# 🚀 4. GRADIENT BOOSTING
+# ==========================================
+gb_model = GradientBoostingClassifier(random_state=42)
+gb_model.fit(X_train, y_train)
+gb_pred = gb_model.predict(X_test)
+
+# ==========================================
+# 📏 GRADIENT BOOSTING EVALUATION
+# ==========================================
+print("\n📊 Gradient Boosting")
+print("\n🎯 Accuracy:", round(accuracy_score(y_test, gb_pred), 4))
+print("\n📊 Classification Report")
+print(classification_report(
+    y_test,
+    gb_pred,
+    target_names=label_encoder.classes_
+))
+print("\n🔍 Confusion Matrix")
+print(confusion_matrix(y_test, gb_pred))
