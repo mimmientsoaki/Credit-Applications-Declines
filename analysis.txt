@@ -11,6 +11,8 @@ To understand what is driving the increase in credit application declines and wh
 ❓ 3. Questions to Answer
 Is the declined rate actually increasing, or it could be that the application rate increased?
 3.1. Has the credit application decline rate changed over time?
+Answr: The credit application decline rate fluctuated across the months, ranging from approximately 39.9% to 45.5%. Although the decline rate changed over time, the variation was relatively small, with most months remaining within the 40%–45% range, suggesting no clear upward or downward trend
+
 3.2. Which customer segments have the highest decline rates?
 3.3. Which application characteristics are associated with higher decline rates?
 3.4. Are there significant trends or changes in decline rates over time?

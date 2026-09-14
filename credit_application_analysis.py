@@ -14,6 +14,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 
+
 df = pd.read_csv("credit_applications.csv")
 
 print("\nFirst 5 Records",df.head())
