@@ -14,9 +14,17 @@ Is the declined rate actually increasing, or it could be that the application ra
 Answr: The credit application decline rate fluctuated across the months, ranging from approximately 39.9% to 45.5%. Although the decline rate changed over time, the variation was relatively small, with most months remaining within the 40%–45% range, suggesting no clear upward or downward trend
 
 3.2. Which customer segments have the highest decline rates?
+Residential Status shows different decline rates across segments, with Living with family having the highest rate (44.54%) and Other the lowest (38.15%). However, the Chi-Square test (p = 0.1703) does not provide sufficient statistical evidence to conclude that Residential Status is associated with Application Status.
+
 3.3. Which application characteristics are associated with higher decline rates?
+Declined applications were characterised by lower credit scores and monthly income, and higher previous defaults, debt-to-income ratios, existing debt and requested amounts compared with approved applications. Credit Score, Previous Defaults, Debt-to-Income, Monthly Income, Existing Debt, Requested Amount and Employment Years showed statistically significant differences, while Residential Status, Employment Type and Region did not show statistically significant associations with Application Status.
+
 3.4. Are there significant trends or changes in decline rates over time?
+The decline rate shows a very slight downward trend over time. However, the trend is not statistically significant (p = 0.8987), indicating that there is insufficient statistical evidence of a significant change in decline rates over time.
+
 3.5. Which factors appear to be most strongly associated with application outcomes?
+The factors that appear most strongly associated with application outcomes are Credit Score, Previous Defaults, Employment Years, Debt-to-Income, Requested Amount, Existing Debt and Monthly Income. Credit Score was the strongest factor, followed by Previous Defaults, Employment Years and Debt-to-Income. Higher Previous Defaults, Debt-to-Income, Existing Debt and Requested Amount were associated with declined applications, while higher Credit Score, Monthly Income and Employment Years were associated with approved applications.
+
 
 🎯 4. Possible Target Variable
 Application Status: Approved, Declined, Pending, Cancelled
